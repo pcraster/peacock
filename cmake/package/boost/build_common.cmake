@@ -44,7 +44,7 @@ else()
                 list(APPEND user_config "using gcc : : ${cxx}")
             endif()
         endif()
-        set(boost_cxx_flags "-std=c++11")
+        set(boost_cxx_flags "-std=c++14")
     elseif((${peacock_compiler_id} STREQUAL "clang"))
         set(boost_toolset clang)
 
@@ -66,7 +66,7 @@ else()
         endif()
 
         # http://stackoverflow.com/questions/12695625/boost-test-crashes-on-exit-with-clang-4-1-llvm-3-1svn
-        set(boost_cxx_flags "-std=c++11 -stdlib=libc++")
+        set(boost_cxx_flags "-std=c++14 -stdlib=libc++")
     endif()
 endif()
 
